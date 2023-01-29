@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import axios from "axios"
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    axios.get('http://localhost:8000/todolist').then((response) => {
+    axios.get('https://simple-todolist-be.vercel.app/todolist').then((response) => {
         res.status(200).json(response.data)
     }).catch((error) => {
         res.status(500).send(error)
