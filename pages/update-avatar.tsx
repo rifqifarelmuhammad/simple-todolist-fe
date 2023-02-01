@@ -58,7 +58,7 @@ export default function Add() {
                     console.log(response)
                 })
                 
-                await axios.post('http://localhost:8000/avatar/', {
+                await axios.post('https://simple-todolist-be.vercel.app/avatar/', {
                     "uId": user.uid,
                     "public_id": publicId,
                     "url": url
@@ -90,7 +90,7 @@ export default function Add() {
                     console.log(response)
                 })
                 
-                await axios.patch(`http://localhost:8000/avatar/${uId}`, {
+                await axios.patch(`https://simple-todolist-be.vercel.app/avatar/${uId}`, {
                     "public_id": publicId,
                     "url": url
                 }).then(function (response){
