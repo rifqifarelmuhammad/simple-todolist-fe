@@ -32,7 +32,7 @@ export default function Add() {
         })
     }
 
-    const onFileChange = (fileChangeEvent) => {
+    const onFileChange = (fileChangeEvent: any) => {
         setFile(fileChangeEvent.target.files[0])
         if (fileChangeEvent.target.files[0] != undefined){
             setImage(URL.createObjectURL(fileChangeEvent.target.files[0]))
@@ -104,7 +104,7 @@ export default function Add() {
         }
     }
 
-    const imageLoader = ({src}) => {
+    const imageLoader = (src: any) => {
         return `https://simple-todolist-be.vercel.app/avatar/${src}`
     }
 
