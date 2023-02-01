@@ -104,7 +104,7 @@ export default function Add() {
         }
     }
 
-    const imageLoader = ({src}) => {
+    const imageLoader = ({src}: {src: any}) => {
         return src
     }
 
