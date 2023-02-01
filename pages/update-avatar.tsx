@@ -58,7 +58,7 @@ export default function Add() {
                     console.log(response)
                 })
                 
-                await axios.post('https://simple-todolist-be.vercel.app/avatar/', {
+                await axios.post('http://localhost:8000/avatar/', {
                     "uId": user.uid,
                     "public_id": publicId,
                     "url": url
@@ -90,7 +90,7 @@ export default function Add() {
                     console.log(response)
                 })
                 
-                await axios.patch(`https://simple-todolist-be.vercel.app/avatar/${uId}`, {
+                await axios.patch(`http://localhost:8000/avatar/${uId}`, {
                     "public_id": publicId,
                     "url": url
                 }).then(function (response){
@@ -105,7 +105,7 @@ export default function Add() {
     }
 
     const imageLoader = (src: any) => {
-        return `https://simple-todolist-be.vercel.app/avatar/${src}`
+        return `http://localhost:8000/avatar/${src}`
     }
 
     return(
