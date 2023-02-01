@@ -53,7 +53,7 @@ export default function Add() {
                 let url = ""
                 await axios.post('https://api.cloudinary.com/v1_1/decwxgqs5/image/upload', formData).then(function (response){
                     publicId = response.data['public_id']
-                    url = response.data['url']
+                    url = response.data['secure_url']
                 }).catch(function (response){
                     console.log(response)
                 })
@@ -85,7 +85,7 @@ export default function Add() {
                 let url = ""
                 await axios.post('https://api.cloudinary.com/v1_1/decwxgqs5/image/upload', formData).then(function (response){
                     publicId = response.data['public_id']
-                    url = response.data['url']
+                    url = response.data['secure_url']
                 }).catch(function (response){
                     console.log(response)
                 })
