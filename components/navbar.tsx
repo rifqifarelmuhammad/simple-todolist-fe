@@ -33,7 +33,7 @@ export default function Header() {
         })
     })
 
-    const imageLoader = (src:any) => {
+    const imageLoader = ({src}) => {
         return src
     }
 

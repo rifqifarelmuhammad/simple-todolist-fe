@@ -58,7 +58,7 @@ export default function Add() {
                     console.log(response)
                 })
                 
-                await axios.post('http://localhost:8000/avatar/', {
+                await axios.post('https://simple-todolist-be.vercel.app/avatar/', {
                     "uId": user.uid,
                     "public_id": publicId,
                     "url": url
@@ -90,7 +90,7 @@ export default function Add() {
                     console.log(response)
                 })
                 
-                await axios.patch(`http://localhost:8000/avatar/${uId}`, {
+                await axios.patch(`https://simple-todolist-be.vercel.app/avatar/${uId}`, {
                     "public_id": publicId,
                     "url": url
                 }).then(function (response){
@@ -104,8 +104,8 @@ export default function Add() {
         }
     }
 
-    const imageLoader = (src: any) => {
-        return `http://localhost:8000/avatar/${src}`
+    const imageLoader = ({src}) => {
+        return src
     }
 
     return(
@@ -113,7 +113,7 @@ export default function Add() {
             <div className="bg-gray-900 rounded-2xl shadow-lg max-w-3xl p-5">
 
             <div className="items-center justify-center flex flex-col mb-3">
-                <Image loader={imageLoader} src={image || "avatar-default.png"} width={50} height={50} alt="avatar" />
+                <Image loader={imageLoader} src={image || "https://res.cloudinary.com/decwxgqs5/image/upload/v1675212347/my-uploads/ajgxzxl6mx8osx5zuioe.png"} width={50} height={50} alt="avatar" />
             </div>
 
             <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" onChange={ev => onFileChange(ev)}></input>
