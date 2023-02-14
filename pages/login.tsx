@@ -10,7 +10,7 @@ export default function Login() {
         email:'',
         password:''
     })
-
+    
     const handleLogin =async (e:any) => {
         e.preventDefault()
         try{

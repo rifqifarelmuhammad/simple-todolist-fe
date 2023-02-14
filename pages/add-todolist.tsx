@@ -23,6 +23,9 @@ export default function Add() {
             }).catch(function (err){
                 console.log(err)
             })
+        }else{
+            alert('Please Fill the Title of Todolist')
+            
         }
     }
 

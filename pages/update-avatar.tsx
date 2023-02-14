@@ -51,14 +51,14 @@ export default function Add() {
             try {
                 let publicId = ""
                 let url = ""
-                await axios.post('https://api.cloudinary.com/v1_1/decwxgqs5/image/upload', formData).then(function (response){
+                await axios.post("https://api.cloudinary.com/v1_1/decwxgqs5/image/upload", formData).then(function (response){
                     publicId = response.data['public_id']
                     url = response.data['secure_url']
                 }).catch(function (response){
                     console.log(response)
                 })
                 
-                await axios.post('https://simple-todolist-be.vercel.app/avatar/', {
+                await axios.post(`api/avatar/post-avatar`, {
                     "uId": user.uid,
                     "public_id": publicId,
                     "url": url
@@ -83,14 +83,14 @@ export default function Add() {
             try {
                 let publicId = ""
                 let url = ""
-                await axios.post('https://api.cloudinary.com/v1_1/decwxgqs5/image/upload', formData).then(function (response){
+                await axios.post("https://api.cloudinary.com/v1_1/decwxgqs5/image/upload", formData).then(function (response){
                     publicId = response.data['public_id']
                     url = response.data['secure_url']
                 }).catch(function (response){
                     console.log(response)
                 })
                 
-                await axios.patch(`https://simple-todolist-be.vercel.app/avatar/${uId}`, {
+                await axios.patch(`api/avatar/update-avatar/${uId}`, {
                     "public_id": publicId,
                     "url": url
                 }).then(function (response){

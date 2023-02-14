@@ -23,7 +23,7 @@ export default function Layout(props: { children: any }){
             }
         })
     }, [todo]);
-
+    
     return (
         <div>
             <div className="grid gap-4 grid-cols-1 sm:grid-flow-cols-1 md:grid-cols-3 lg:grid-cols-4 m-4" id="todo">

@@ -27,7 +27,6 @@ export default function Header() {
                     break;
                 }
             }
-            console.log(avatar)
         }).catch(function (err){
             console.log(err)
         })
